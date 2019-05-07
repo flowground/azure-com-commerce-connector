@@ -1,0 +1,40 @@
+{
+    "type": "object",
+    "properties": {
+        "reportedStartTime": {
+            "required": true,
+            "type": "string",
+            "format": "date-time"
+        },
+        "reportedEndTime": {
+            "required": true,
+            "type": "string",
+            "format": "date-time"
+        },
+        "showDetails": {
+            "required": false,
+            "type": "boolean"
+        },
+        "aggregationGranularity": {
+            "required": false,
+            "type": "string",
+            "enum": [
+                "Daily",
+                "Hourly"
+            ],
+            "default": "Daily"
+        },
+        "continuationToken": {
+            "required": false,
+            "type": "string"
+        },
+        "subscriptionId": {
+            "required": true,
+            "type": "string"
+        },
+        "api_version": {
+            "required": true,
+            "type": "string"
+        }
+    }
+}
